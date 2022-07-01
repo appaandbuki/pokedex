@@ -23,12 +23,20 @@ let pokemonList= [
     types:[ 'electric'] },
   ];
 
-  //create a for loop that iterates over each item in pokemonList
-  pokemonList.forEach(function(name){
-      document.write(name.name + " ");
-  });
 
+return{
+  add: function(pokemon){
+    pokemonList.push(pokemon);
+  },
+  getAll: function(){
+    return pokemonList;
+  }
+};
 })();
+
+//create a for loop that iterates over each item in pokemonList
+pokemonList.forEach(function(name){
+    document.write(pokemonReponsitory.getAll());
 
 //Below is for loop for PokemonList array. Replaced with forEach loop.
 
