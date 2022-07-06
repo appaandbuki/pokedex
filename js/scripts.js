@@ -24,19 +24,22 @@ let pokemonList= [
   ];
 
 
-return{
-  add: function(pokemon){
-    pokemonList.push(pokemon);
-  },
-  getAll: function(){
-    return pokemonList;
-  }
-};
+  return {
+  add: add,
+  getAll: getAll
+  };
+
 })();
 
 //create a for loop that iterates over each item in pokemonList
-pokemonList.forEach(function(name){
-    document.write(pokemonReponsitory.getAll());
+
+pokemonRepository.getAll().forEach(function (pokemon) {
+    if (pokemon.height >= 2) {
+    document.write( '<p>' + pokemon.name + ' ' + '(Height: ' + pokemon.height + ')' + ' - Wow that\'s big!' + '</p>')
+    }
+    else document.write( '<p>' + pokemon.name + ' ' + '(Height: ' + + pokemon.height + ')' + '</p>')
+    });
+
 
 //Below is for loop for PokemonList array. Replaced with forEach loop.
 
